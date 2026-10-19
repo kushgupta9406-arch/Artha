@@ -1,0 +1,24 @@
+ARTHA - Sector Intelligence & Ranking Desk
+==========================================
+
+WINDOWS
+1. Unzip this folder anywhere (e.g. Desktop). Do not run it from inside the zip.
+2. Double-click SETUP_AND_RUN.bat
+   - First time: it installs Python (if needed) and ARTHA's packages. Takes 3-5 minutes; needs internet.
+   - After that: it starts in a few seconds.
+3. Your browser opens ARTHA at http://localhost:8501. Keep the black window open while using it.
+
+MAC
+Open Terminal in this folder and run:
+  python3 -m venv .venv && .venv/bin/pip install -r requirements.txt && .venv/bin/streamlit run app.py
+
+WHAT WORKS
+- All pages, rankings and the Performance validation work immediately (the live snapshot is included).
+- Live mode: "Refresh live data & rerank" in the sidebar pulls today's NSE prices and the latest
+  Yahoo Finance statements (10-15 minutes, needs internet).
+- Ask ARTHA:
+  * If Claude Code is installed and signed in on this computer, it answers with Claude (free with a Claude subscription).
+  * Otherwise it runs in free offline mode (set question types).
+  * Optional: a free Groq key in .streamlit\secrets.toml gives AI answers without Claude Code.
+
+Model-based research tool; not personalised investment advice.
